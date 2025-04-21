@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/css/hstyle.css}" />
+  <script th:src="@{/js/script.js}"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      IMAGE STEGANOGRAPHY
+
+    </h1>
+
+
+  </header>
+  <div class="mybtn">
+    <button id="encodeButton">Encode</button>
+    <button id="decodeButton">Decode</button>
+  </div>
+
+  <div class="forms-container">
+    <div>
+
+      <form id="encode-form" class="encode-form" style="display: none;">
+        <h2>Encode</h2>
+        <label for="encode-image">Select Image:</label>
+        <input type="file" id="encode-image" name="encode-image"><br><br>
+        <label for="pas">Password:</label>
+        <input type="password" id="pas" name="pas"><br><br>
+        <label for="secret-message">Secret Message:</label>
+        <textarea id="secret-message" name="secret-message"></textarea><br><br>
+        <button id="imgButton" type="submit">Encode</button>
+      </form>
+    </div>
+
+    <div>
+
+      <form id="decode-form" class="decode-form" style="display: none;">
+        <h2>Decode</h2>
+        <label for="decode-image">Select Image:</label>
+        <input type="file" id="decode-image" name="decode-image"><br><br>
+        <label for="pas">Password:</label>
+        <input type="password" id="dpas" name="pas"><br><br>
+        <button id="txtButton" type="submit">Decode</button>
+      </form>
+
+
+    </div>
+
+   </div>
+   <div id="output" style="display: none;">
+    <p> Encoded Image:
+      <a href="" download="EncodedImage">
+        <button id="dwn"
+          style="background-color: #3a0101;color: white;border: none;border-radius: 5px;cursor: pointer;font-size: 16px;width: 92%; padding-top: 0;margin-top: 2px;">
+          Download Image</button>
+      </a>
+
+    </p>
+   </div>
+   <div id="out" style="display: none;"></div>
+
+  </div>
+
+</body>
+
+</html>
